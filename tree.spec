@@ -1,16 +1,11 @@
 Name:     tree
 Version:  1.7.0
-Release:  17
+Release:  18
 Summary:  Tree file viewer tool
 License:  GPLv2+
 URL:      http://mama.indstate.edu/users/ice/tree/
 
 Source0:  ftp://mama.indstate.edu/linux/tree/%{name}-%{version}.tgz
-
-Patch0:   0000-tree-preserve-timestamps.patch
-Patch1:   0001-tree-args.patch
-Patch2:   0002-tree-dircolors-ec.patch
-Patch3:   0003-tree-size-field-len.patch
 
 BuildRequires: gcc git
 
@@ -49,11 +44,17 @@ install -D -m 644 doc/tree.1 $RPM_BUILD_ROOT%{_mandir}/man1/tree.1
 %{_mandir}/man1/*
 
 %changelog
-* Wed Aug 21 2019 zhanghaibo <ted.zhang@huawei.com>  - 1.7.0-17
-- Type:enhancemnet
+* Wed Jan 8 2020 openEuler BuildTeam <buildteam@openeuler.org> - 1.7.0-18
+- Type:enhancement
 - ID:NA
 - SUG:NA
-- DESCi:openEuler Debranding
+- DESC:Repackage
+
+* Wed Aug 21 2019 zhanghaibo <ted.zhang@huawei.com>  - 1.7.0-17
+- Type:enhancement
+- ID:NA
+- SUG:NA
+- DESC:openEuler Debranding
 
 * Tue Aug 20 2019 huangzheng <huangzheng22@huawei.com> - 1.7.0-16
 - Type:enhancement
