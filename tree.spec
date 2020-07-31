@@ -1,6 +1,6 @@
 Name:     tree
-Version:  1.7.0
-Release:  18
+Version:  1.8.0
+Release:  1
 Summary:  Tree file viewer tool
 License:  GPLv2+
 URL:      http://mama.indstate.edu/users/ice/tree/
@@ -44,6 +44,9 @@ install -D -m 644 doc/tree.1 $RPM_BUILD_ROOT%{_mandir}/man1/tree.1
 %{_mandir}/man1/*
 
 %changelog
+* Thu Jul 16 2020 zhangyouming <zhangyouming4@huawei.com> - 1.8.0-1
+upgrade package from 1.7.0 to 1.8.0
+
 * Wed Jan 8 2020 openEuler BuildTeam <buildteam@openeuler.org> - 1.7.0-18
 - Type:enhancement
 - ID:NA
