@@ -1,13 +1,13 @@
 Name:     tree
 Version:  1.8.0
-Release:  1
+Release:  2
 Summary:  Tree file viewer tool
 License:  GPLv2+
 URL:      http://mama.indstate.edu/users/ice/tree/
 
 Source0:  ftp://mama.indstate.edu/linux/tree/%{name}-%{version}.tgz
 
-BuildRequires: gcc git
+BuildRequires: gcc 
 
 %description
 Tree is a recursive directory listing command that produces a depth indented
@@ -23,7 +23,7 @@ Requires:       man
 This contains man files for the using of tree.
 
 %prep
-%autosetup -n %{name}-%{version} -p1 -S git
+%autosetup -n %{name}-%{version} -p1
 
 #fix non-ASCII characters abnormal display
 sed -e 's/LINUX/__linux__/' -i tree.c
@@ -44,6 +44,9 @@ install -D -m 644 doc/tree.1 $RPM_BUILD_ROOT%{_mandir}/man1/tree.1
 %{_mandir}/man1/*
 
 %changelog
+* Fri Jul 30 2021 chenyanpanHW <chenyanpan@huawei.com> - 1.8.0-2
+- DESC: delete -S git from %autosetup, and delete BuildRequires git
+
 * Thu Jul 16 2020 zhangyouming <zhangyouming4@huawei.com> - 1.8.0-1
 upgrade package from 1.7.0 to 1.8.0
 
