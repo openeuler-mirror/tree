@@ -1,0 +1,39 @@
+From 894f81c355d80445d9117194d458381b73da989f Mon Sep 17 00:00:00 2001
+From: xueyamao <xueyamao@kylinos.cn>
+Date: Sun, 24 Jul 2022 18:29:29 -0700
+Subject: [PATCH]tree:add --du and --prune description in usage()
+
+In usage(), '--du' and "--prune" options are supported,
+but the description of them is not given.
+So we add --du and --prune description in usage().
+
+Signed-off-by: xueyamao xueyamao@kylinos.cn
+---
+ tree.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/tree.c b/tree.c
+index a633c57..e235853 100644
+--- a/tree.c
++++ b/tree.c
+@@ -632,7 +632,7 @@ void usage(int n)
+ 	"\t[-L level [-R]] [-P pattern] [-I pattern] [-o filename] [--version]\n"
+ 	"\t[--help] [--inodes] [--device] [--noreport] [--nolinks] [--dirsfirst]\n"
+ 	"\t[--charset charset] [--filelimit[=]#] [--si] [--timefmt[=]<f>]\n"
+-	"\t[--sort[=]<name>] [--matchdirs] [--ignore-case] [--fromfile] [--]\n"
++	"\t[--sort[=]<name>] [--matchdirs] [--ignore-case] [--fromfile] [--du] [--prune] [--]\n"
+ 	"\t[<directory list>]\n");
+   if (n < 2) return;
+   fprintf(stdout,
+@@ -653,6 +653,8 @@ void usage(int n)
+ 	"  --filelimit # Do not descend dirs with more than # files in them.\n"
+ 	"  --timefmt <f> Print and format time according to the format <f>.\n"
+ 	"  -o filename   Output to file instead of stdout.\n"
++	"  --du          Print directory sizes.\n"
++	"  --prune       Prune empty directories from the output.\n"
+ 	"  ------- File options -------\n"
+ 	"  -q            Print non-printable characters as '?'.\n"
+ 	"  -N            Print non-printable characters as is.\n"
+-- 
+1.8.3.1
+
