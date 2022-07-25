@@ -1,6 +1,6 @@
 Name:     tree
 Version:  1.8.0
-Release:  2
+Release:  3
 Summary:  Tree file viewer tool
 License:  GPLv2+
 URL:      http://mama.indstate.edu/users/ice/tree/
@@ -8,6 +8,8 @@ URL:      http://mama.indstate.edu/users/ice/tree/
 Source0:  ftp://mama.indstate.edu/linux/tree/%{name}-%{version}.tgz
 
 BuildRequires: gcc 
+# Document --du and --prune options in help output.
+Patch0: 0000-Fix-tree-args-option-displayed-incomplete.patch
 
 %description
 Tree is a recursive directory listing command that produces a depth indented
@@ -44,6 +46,9 @@ install -D -m 644 doc/tree.1 $RPM_BUILD_ROOT%{_mandir}/man1/tree.1
 %{_mandir}/man1/*
 
 %changelog
+* Tue Jul 12 2022 xueyamao <xueyamao@kylinos.cn> - 1.8.0-3
+- DESC: Document --du and --prune options in help output
+
 * Fri Jul 30 2021 chenyanpanHW <chenyanpan@huawei.com> - 1.8.0-2
 - DESC: delete -S git from %autosetup, and delete BuildRequires git
 
