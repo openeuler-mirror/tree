@@ -1,6 +1,6 @@
 Name:     tree
-Version:  2.0.4
-Release:  2
+Version:  2.1.0
+Release:  1
 Summary:  Tree file viewer tool
 License:  GPLv2+
 URL:      http://mama.indstate.edu/users/ice/tree/
@@ -45,6 +45,9 @@ install -D -m 644 doc/tree.1 $RPM_BUILD_ROOT%{_mandir}/man1/tree.1
 %{_mandir}/man1/*
 
 %changelog
+* Thu Feb 09 2023 Kunlin Yang <yangkunlin7@huawei.com> - 2.1.0-1
+- upgrade package from 2.0.4 to 2.1.0
+
 * Wed Nov 16 2022 Kunlin Yang <yangkunlin7@huawei.com> - 2.0.4-2
 - add SOURCE http url
 
