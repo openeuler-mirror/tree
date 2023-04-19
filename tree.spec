@@ -1,12 +1,13 @@
 Name:     tree
 Version:  2.1.0
-Release:  1
+Release:  2
 Summary:  Tree file viewer tool
 License:  GPLv2+
 URL:      http://mama.indstate.edu/users/ice/tree/
 
 Source0:  http://mama.indstate.edu/users/ice/tree/src/%{name}-%{version}.tgz
 Source1:  ftp://mama.indstate.edu/linux/tree/%{name}-%{version}.tgz
+Patch0:   0001-Support-specify-CC.patch
 
 BuildRequires: gcc
 
@@ -45,6 +46,9 @@ install -D -m 644 doc/tree.1 $RPM_BUILD_ROOT%{_mandir}/man1/tree.1
 %{_mandir}/man1/*
 
 %changelog
+* Wed Apr 19 2023 jammyjellyfish <jammyjellyfish255@outlook.com> - 2.1.0-2
+- Support specify CC
+
 * Thu Feb 09 2023 Kunlin Yang <yangkunlin7@huawei.com> - 2.1.0-1
 - upgrade package from 2.0.4 to 2.1.0
 

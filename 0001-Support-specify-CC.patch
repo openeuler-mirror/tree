@@ -1,0 +1,28 @@
+From c90782c682df0488d51e245d6413be336b7f6782 Mon Sep 17 00:00:00 2001
+From: jammyjellyfish <jammyjellyfish255@outlook.com>
+Date: Wed, 19 Apr 2023 14:46:09 +0800
+Subject: [PATCH] Support specify CC
+
+Makefile set CC compiler as gcc, and not reading CC from
+environment variable. This patch lets Makefile read $CC
+environment variable and use it as compiler, if exists
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 752e550..0297cf7 100644
+--- a/Makefile
++++ b/Makefile
+@@ -18,7 +18,7 @@
+ 
+ PREFIX=/usr/local
+ 
+-CC=gcc
++CC?=gcc
+ INSTALL=install
+ 
+ VERSION=2.1.0
+-- 
+2.40.0
+
